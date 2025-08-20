@@ -12,16 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<header>
+<body>
     <nav>
         <div id="logo">
             <img class="icons" src="assets/images/logo.png" alt="Logo">
             Ashton
         </div>
         <div style="display: flex; gap: 2rem; align-items: center;">
-            <div><a href="#">About Me</a></div>
-            <div><a href="#">Skills</a></div>
-            <div><a href="#">Projects</a></div>
+            <div><a href="#hero">About Me</a></div>
+            <div><a href="#skills-section">Skills</a></div>
+            <div><a href="#projects-section">Projects</a></div>
             <div><a href="#">Contact Me</a></div>
         </div>
         <div id="resume-box">
@@ -31,39 +31,38 @@
             </button>
         </div>
     </nav>
-</header>
-<body>
     <section id="hero">
-        <div id="hero-body">
-            <div id="hero-header">
-                <h1>Hello I'm <span>Ashton</span> <br><span>Software</span> <span class="outlined">Developer</span> <br> Based in <span>Malaysia</span></h1>
+        <div class="container">
+            <div id="hero-body">
+                <div id="hero-header">
+                    <h1>Hello I'm <span>Ashton</span> <br><span>Software</span> <span class="outlined">Developer</span> <br> Based in <span>Malaysia</span></h1>
+                </div>
+                <div id="hero-content">
+                    I'm Ashton Lim Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>                
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
             </div>
-            <div id="hero-content">
-                I'm Ashton Lim Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            <div>
+                <img id="human" src="assets/images/human.jpg" alt="Human Image">
             </div>
-            <div class="social-icons">
-                <a href="#" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>                
-                <a href="#" class="social-icon">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </div>
-        </div>
-        <div>
-            <img id="human" src="assets/images/human.jpg" alt="Human Image">
         </div>
     </section>
     <section id="skills-section">
-        <h1 id="skills-header"><span style="text-decoration: underline;">Skills</span></h1>
-        <p id="skills-subheader">Professional Skills<p>
-        <p id="skills-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit</p>
+        <h1 class="skills-header"><span style="text-decoration: underline; text-underline-offset: 12px;">Skills</span></h1>
+        <p class="skills-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit</p>
         <div class="skills-container">
             <div class="skill-item">
                 <div class="skill-info">
@@ -99,8 +98,52 @@
             </div>
         </div>
     </section>
-    <section>
-        My Projects
+    <section id="projects-section">
+        <div class="container">
+            <h1 class="projects-header"><span style="text-decoration: underline; text-underline-offset: 12px;">My Projects</span></h1>
+            
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="assets/images/project1.jpg" alt="Project 1 Image">
+                </div>
+                <div class="project-desc">
+                    <h1>01</h1>
+                    <h2>Education related Website (Html, Css, Javascript)</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web</p>
+                    <div class="project-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item reverse">
+                <div class="project-image">
+                    <img src="assets/images/project2.jpg" alt="Project 2 Image">
+                </div>
+                <div class="project-desc">
+                    <h1>02</h1>
+                    <h2>Redesign Hospital-Related Application(Figma)</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web</p>
+                    <div class="project-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="assets/images/project3.jpg" alt="Project 3 Image">
+                </div>
+                <div class="project-desc">
+                    <h1>03</h1>
+                    <h2>Education related Website (Html, Css, Javascript)</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web</p>
+                    <div class="project-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section>
         Contact Me

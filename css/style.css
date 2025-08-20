@@ -1,19 +1,16 @@
+/* ===================================
+   CSS RESET & BASE STYLES
+   ================================== */
+
+/* Universal selector (*) applies to ALL elements */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Makes padding/border included in width calculations */
     font-family: 'Inter', sans-serif;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.2em 1.5em;
-    background-color: white;
-    position: sticky;
-    font-weight: bold;
-}
-
+/* Base typography styles */
 h1 {
     margin-bottom: 20px;
 }
@@ -21,10 +18,43 @@ h1 {
 a {
     color: black;
     text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
 }
 
+/* Navbar link hover effects */
+nav a:hover {
+    color: #417AFF;
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Brand color - using CSS custom property would be better for workshops on variables */
 span {
     color: #417AFF;
+}
+
+/* ===================================
+   NAVIGATION BAR
+   ================================== */
+
+/* Sticky navigation that stays at top when scrolling */
+nav {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between; /* Spreads items to edges */
+    padding: 1.2em 1.5em;
+    background-color: white;
+    position: sticky; /* Key concept: sticky positioning */
+    top: 0; /* Sticks to top of viewport */
+    font-weight: bold;
+    z-index: 1000; /* Ensures nav stays above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Logo section with icon and text */
+#logo {
+    display: flex;
+    align-items: center; /* Vertically centers icon and text */
+    gap: 0.5em; /* Space between icon and text */
+    border: none;
 }
 
 .icons {
@@ -32,13 +62,7 @@ span {
     height: 25px;
 }
 
-#logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    border: none;
-}
-
+/* Resume button styling */
 #resume-btn {
     background-color: white;
     border-radius: 10px;
@@ -47,10 +71,10 @@ span {
     align-items: center;
     gap: 0.5em;
     border: none;
-    cursor: pointer;
+    cursor: pointer; /* Shows hand cursor on hover */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     font-weight: bold;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth animation for all property changes */
 }
 
 #resume-btn i {
@@ -59,16 +83,14 @@ span {
     transition: all 0.3s ease;
 }
 
+/* Button container for additional hover effects */
 #resume-box {
     transition: all 0.3s ease;
 }
 
+/* Hover states - important for user interaction feedback */
 #resume-box:hover {
-    transform: scale(1.05);
-}
-
-#resume-btn:hover i {
-    color: white;
+    transform: scale(1.05); /* Slightly enlarges on hover */
 }
 
 #resume-btn:hover {
@@ -77,14 +99,33 @@ span {
     transform: scale(1.05);
 }
 
+#resume-btn:hover i {
+    color: white;
+}
+
+/* ===================================
+   HERO SECTION (Main landing area)
+   ================================== */
+
+/* Full-width background with contained content - key layout concept */
 #hero {
     background-color: #fffcf5;
+    width: 100%; /* Full viewport width */
+    padding: 20px 0; /* Vertical padding only */
+}
+
+/* Container pattern: limits content width while maintaining full background */
+#hero .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 80px;
+    max-width: 1200px; /* Constrains content width */
+    margin: 0 auto; /* Centers the container */
+    padding: 0 80px; /* Horizontal padding for content */
+}
+
+#hero-body {
+    flex: 1; /* Takes up remaining space in flex container */
 }
 
 #hero-header {
@@ -96,14 +137,11 @@ span {
     margin-bottom: 20px;
 }
 
+/* Text outline effect - advanced CSS technique */
 .outlined {
-    -webkit-text-stroke: 2px black;
-    -webkit-text-fill-color: transparent;
-    color: black;
-}
-
-#hero-body {
-    flex: 1;
+    -webkit-text-stroke: 2px black; /* Creates outline */
+    -webkit-text-fill-color: transparent; /* Makes interior transparent */
+    color: black; /* Fallback for browsers that don't support webkit properties */
 }
 
 #hero-content {
@@ -111,19 +149,25 @@ span {
     max-width: 80%;
 }
 
+/* Hero image styling */
 #human {
     width: 316px;
     height: 475px;
-    transform: scaleX(-1);
+    transform: scaleX(-1); /* Horizontally flips the image */
     opacity: 1;
 }
 
+/* ===================================
+   SOCIAL MEDIA ICONS
+   ================================== */
+
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 15px; /* Space between icons */
     margin-top: 30px;
 }
 
+/* Individual social media icon styling */
 .social-icon {
     width: 50px;
     height: 50px;
@@ -134,7 +178,7 @@ span {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -143,63 +187,72 @@ span {
     color: #333;
 }
 
+/* Interactive hover effects */
 .social-icon:hover {
     background-color: #417AFF;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(65, 122, 255, 0.3);
+    transform: translateY(-2px); /* Lifts icon slightly */
+    box-shadow: 0 6px 15px rgba(65, 122, 255, 0.3); /* Enhanced shadow */
 }
 
 .social-icon:hover i {
     color: white;
 }
 
+/* ===================================
+   SKILLS SECTION
+   ================================== */
+
 #skills-section {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 20px 20px;
+    padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-#skills-header {
+.skills-header {
     font-weight: 900;
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
-#skills-subheader {
-    font-weight: 700;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-#skills-desc {
+.skills-desc {
     margin: 30px auto 50px auto;
     color: #666;
     max-width: 600px;
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.6; /* Improves readability */
 }
 
+/* Skills container using flexbox for layout */
 .skills-container {
     max-width: 800px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stacks items vertically */
     gap: 20px;
 }
 
+/* Individual skill item card */
 .skill-item {
     background: white;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: relative; /* Allows absolute positioning of percentage */
     border: 2px solid #417AFF;
+    transition: all 0.3s ease; /* Smooth hover transitions */
+    cursor: pointer;
 }
 
+/* Skill item hover effects */
+.skill-item:hover {
+    transform: translateY(-5px); /* Lifts card on hover */
+    box-shadow: 0 10px 25px rgba(65, 122, 255, 0.2); /* Enhanced shadow with brand color */
+}
+
+/* Skill name and icon container */
 .skill-info {
     display: flex;
     align-items: center;
@@ -218,8 +271,9 @@ span {
     color: #333;
 }
 
+/* Percentage display - positioned absolutely */
 .skill-percentage {
-    position: absolute;
+    position: absolute; /* Removes from normal flow */
     top: 20px;
     right: 20px;
     font-weight: 600;
@@ -227,23 +281,26 @@ span {
     font-size: 1.1rem;
 }
 
+/* Progress bar container */
 .skill-bar {
     width: 100%;
     height: 8px;
-    background-color: #e9ecef;
+    background-color: #e9ecef; /* Light gray background */
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden; /* Hides overflow from progress bar */
     margin-top: 10px;
 }
 
+/* Animated progress bar */
 .skill-progress {
     height: 100%;
-    background: linear-gradient(90deg, #417AFF 0%, #6e5ce7 100%);
+    background: linear-gradient(90deg, #417AFF 0%, #6e5ce7 100%); /* Gradient background */
     border-radius: 10px;
-    transition: width 2s ease-in-out;
-    width: 0%;
+    transition: width 2s ease-in-out; /* Smooth width animation */
+    width: 0%; /* Starts at 0, animates to target width */
 }
 
+/* Different skill levels - could be replaced with CSS custom properties */
 .skill-progress[data-width="95"] {
     width: 95%;
 }
@@ -255,3 +312,120 @@ span {
 .skill-progress[data-width="30"] {
     width: 30%;
 }
+
+/* ===================================
+   PROJECTS SECTION
+   ================================== */
+
+/* Full-width background section */
+#projects-section {
+    background-color: #fffcf5;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Container for consistent width and centering */
+#projects-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.projects-header {
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Individual project layout */
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    gap: 60px;
+}
+
+/* Alternating layout - key responsive design technique */
+.project-item.reverse {
+    flex-direction: row-reverse; /* Reverses order for alternating layout */
+}
+
+/* Project image styling with card effect */
+.project-image img {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Card-like shadow */
+    max-width: 500px;
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Project description area */
+.project-desc {
+    text-align: left;
+    flex: 1; /* Takes remaining space */
+}
+
+.project-desc h1 {
+    font-size: 4rem;
+    font-weight: 300; /* Thin font weight for large numbers */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-desc h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.project-desc p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* External link icon button */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    transform: scale(1.1);
+}
+
+.project-link i {
+    color: #666;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover i {
+    color: #417AFF;
+}
+
+/* ===================================
+   WORKSHOP NOTES:
+   
+   Key CSS Concepts Demonstrated:
+   1. Flexbox for layouts (nav, hero, skills)
+   2. CSS Grid alternative: Could use for skills-container
+   3. Position: sticky for navigation
+   4. CSS Transitions for smooth animations
+   5. Box-shadow for depth and card effects
+   6. Transform for hover effects and image flipping
+   7. Pseudo-classes (:hover) for interactivity
+   8. CSS specificity with selectors
+   9. Responsive units (rem, em, %)
+   10. Container pattern for layout consistency
+   ================================== */
