@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website">
+    <meta name="description" content="Ashton's Personal website">
     <meta name="author" content="Your Name">
-    <title>Personal Website</title>
+    <title>Ashton's Personal Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,11 +19,16 @@
             <img class="icons" src="assets/images/logo.png" alt="Logo">
             Ashton
         </div>
-        <div style="display: flex; gap: 2rem; align-items: center;">
+        <div class="nav-links">
             <div><a href="#hero">About Me</a></div>
             <div><a href="#skills-section">Skills</a></div>
             <div><a href="#projects-section">Projects</a></div>
-            <div><a href="#">Contact Me</a></div>
+            <div><a href="#contacts-section">Contact Me</a></div>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <div id="resume-box">
             <button id="resume-btn">
@@ -38,7 +44,7 @@
                     <h1>Hello I'm <span>Ashton</span> <br><span>Software</span> <span class="outlined">Developer</span> <br> Based in <span>Malaysia</span></h1>
                 </div>
                 <div id="hero-content">
-                    I'm Ashton Lim Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    I'm Ashton Lim, a passionate software developer with a love for creating innovative web applications. I specialize in modern web technologies and enjoy turning complex problems into simple, beautiful solutions. When I'm not coding, you'll find me exploring new technologies and contributing to open-source projects.
                 </div>
                 <div class="social-icons">
                     <a href="#" class="social-icon">
@@ -62,7 +68,7 @@
     </section>
     <section id="skills-section">
         <h1 class="skills-header"><span style="text-decoration: underline; text-underline-offset: 12px;">Skills</span></h1>
-        <p class="skills-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit</p>
+        <p class="skills-desc">Here are the core technologies and tools I work with. I'm constantly learning and expanding my skillset to stay current with the latest developments in web development.</p>
         <div class="skills-container">
             <div class="skill-item">
                 <div class="skill-info">
@@ -145,11 +151,58 @@
             </div>
         </div>
     </section>
-    <section>
-        Contact Me
+    <section id="contacts-section">
+        <div class="container">
+            <h1 class="contacts-header"><span style="text-decoration: underline; text-underline-offset: 12px;">Contact Me</span></h1>
+
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contact-form" onsubmit="sendEmail(event)">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Message" rows="6" required></textarea>
+                        <div class="form-bottom">
+                            <button type="submit" class="contact-btn">Get in-touch</button>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i class="fab fa-discord"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2>Let's talk about<br>Something special</h2>
+                    <p>Ready to bring your ideas to life? I'd love to hear about your project and discuss how we can work together to create something amazing.</p>
+                    <div class="contact-details">
+                        <p class="email"><i class="fas fa-envelope"></i> ashton01234@gmail.com</p>
+                        <p class="phone"><i class="fas fa-phone"></i> 012 2382567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
-        Copyright 2025
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="footer-brand">
+                    <img class="icons" src="assets/images/logo.png" alt="Logo">
+                    <h3>Ashton</h3>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 ZC Lim | All rights reserved
+            </div>
+        </div>
     </footer>
     <script src="js/main.js"></script>
 </body>
