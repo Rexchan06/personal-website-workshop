@@ -1,0 +1,142 @@
+/* STEP 2: NAVIGATION STYLING */
+/* Add this CSS to your CodePen to transform the ugly navigation into something professional! */
+
+/* ===== CSS RESET & BASE STYLES ===== */
+/* Students should TYPE these fundamental concepts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Makes width/height calculations easier */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Basic link styling */
+a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;  /* Smooth animations for all changes */
+}
+
+/* Brand color - this blue appears throughout the site */
+span {
+    color: #417AFF;
+}
+
+/* ===== NAVIGATION BAR STYLING ===== */
+/* 🔥 STUDENTS TYPE THESE 4 KEY LINES - CORE CONCEPTS! 🔥 */
+nav {
+    display: flex;                    /* 👉 TYPE: Creates horizontal layout */
+    justify-content: space-between;  /* 👉 TYPE: Spreads items to edges */
+    position: sticky;                /* 👉 TYPE: Makes nav stick to top */
+    top: 0;                         /* 👉 TYPE: Sticks to very top */
+    
+    /* ✂️ COPY-PASTE: Visual styling (focus on concepts above) */
+    padding: 1.2em 1.5em;
+    background-color: white;
+    font-weight: bold;
+    z-index: 1000;                  /* Ensures nav stays above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+/* Logo section styling */
+#logo {
+    display: flex;
+    align-items: center;  /* Vertically centers icon and text */
+    gap: 0.5em;          /* Space between icon and text */
+}
+
+.icons {
+    width: 25px;
+    height: 25px;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    gap: 2rem;          /* Space between navigation items */
+    align-items: center;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    color: #417AFF;                 /* Changes color on hover */
+    transform: translateY(-2px);   /* Slight upward movement */
+}
+
+/* Resume button styling */
+#resume-btn {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.5em 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    border: none;
+    cursor: pointer;                /* Shows hand cursor on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);  /* Creates depth */
+    font-weight: bold;
+    transition: all 0.3s ease;     /* Smooth animation for all changes */
+}
+
+#resume-btn i {
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Resume button container */
+#resume-box {
+    transition: all 0.3s ease;
+}
+
+/* 🔥 HOVER EFFECTS - STUDENTS TYPE THESE 3 INTERACTIVE CONCEPTS! 🔥 */
+#resume-box:hover {
+    transform: scale(1.05);  /* 👉 TYPE: Slightly enlarges on hover */
+}
+
+#resume-btn:hover {
+    background-color: #417AFF;  /* 👉 TYPE: Changes background color */
+    color: white;               /* 👉 TYPE: Changes text color */
+    
+    /* ✂️ COPY-PASTE: Same transform (already learned above) */
+    transform: scale(1.05);
+}
+
+#resume-btn:hover i {
+    color: white;  /* Changes icon color on hover */
+}
+
+/* ===== MOBILE HAMBURGER MENU ===== */
+/* Hidden by default on desktop - shows on mobile */
+.hamburger {
+    display: none;           /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;      /* Animation for hamburger transformation */
+}
+
+/* ===== WHAT STUDENTS LEARNED ===== */
+/* 
+🎯 CONCEPTS STUDENTS TYPED (core understanding):
+1. display: flex - Creates horizontal layouts
+2. justify-content: space-between - Spreads items apart
+3. position: sticky - Navigation follows the page
+4. :hover pseudo-class - Interactive state changes
+5. transform: scale() - Enlarges elements on interaction
+6. Background color changes for button states
+
+📋 CONCEPTS STUDENTS COPY-PASTED (supporting details):
+- Visual styling (padding, shadows, colors)
+- CSS reset and base styles
+- Detailed positioning and spacing
+
+Next step: Add hero section styling for professional landing area!
+*/

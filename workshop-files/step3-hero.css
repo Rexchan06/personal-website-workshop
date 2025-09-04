@@ -1,0 +1,114 @@
+/* STEP 3: HERO SECTION STYLING */
+/* Add this CSS to Step 2's CSS to create a professional landing section! */
+/* Copy ALL of step2-navigation.css first, then add this below */
+
+/* ===== HERO SECTION - MAIN LANDING AREA ===== */
+/* Students should TYPE these key layout concepts */
+#hero {
+    background-color: #fffcf5;  /* TYPE THIS: Light cream background */
+    width: 100%;                /* TYPE THIS: Full viewport width */
+    padding: 20px 0;           /* Vertical padding only */
+}
+
+/* Container pattern - important web design concept */
+#hero .container {
+    display: flex;                    /* TYPE THIS: Side-by-side layout */
+    justify-content: space-between;  /* TYPE THIS: Spreads content apart */
+    align-items: center;             /* TYPE THIS: Vertically centers content */
+    max-width: 1200px;               /* TYPE THIS: Limits content width */
+    margin: 0 auto;                  /* TYPE THIS: Centers the container */
+    padding: 0 80px;                /* Horizontal padding for content */
+}
+
+/* Left side - text content */
+#hero-body {
+    flex: 1;  /* Takes up remaining space in flex container */
+}
+
+/* Main headline styling */
+#hero-header {
+    font-size: x-large;
+}
+
+#hero-header h1 {
+    font-size: 3rem;        /* Large, eye-catching text */
+    margin-bottom: 20px;
+}
+
+/* Text outline effect - advanced CSS technique */
+.outlined {
+    -webkit-text-stroke: 2px black;           /* Creates outline around text */
+    -webkit-text-fill-color: transparent;    /* Makes interior transparent */
+    color: black;                             /* Fallback for unsupported browsers */
+}
+
+/* Description text styling */
+#hero-content {
+    font-weight: 100;    /* Light font weight for readability */
+    max-width: 80%;      /* Prevents text from being too wide */
+    margin-bottom: 30px;
+    line-height: 1.6;    /* Improves readability */
+}
+
+/* Profile image styling */
+#human {
+    width: 316px;
+    height: 475px;
+    transform: scaleX(-1);  /* Horizontally flips the image */
+    border-radius: 15px;    /* Rounded corners */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);  /* Subtle shadow */
+}
+
+/* ===== SOCIAL MEDIA ICONS ===== */
+/* Students should TYPE the flexbox properties */
+.social-icons {
+    display: flex;      /* TYPE THIS: Horizontal layout */
+    gap: 15px;         /* TYPE THIS: Space between icons */
+    margin-top: 30px;
+}
+
+/* Individual social media icon styling */
+.social-icon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #417AFF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;     /* Smooth transitions for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon i {
+    font-size: 20px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Interactive hover effects - Students should TYPE these */
+.social-icon:hover {
+    background-color: #417AFF;                    /* TYPE THIS: Changes background */
+    transform: translateY(-2px);                 /* TYPE THIS: Lifts icon slightly */
+    box-shadow: 0 6px 15px rgba(65, 122, 255, 0.3);  /* Enhanced shadow with brand color */
+}
+
+.social-icon:hover i {
+    color: white;  /* TYPE THIS: Changes icon color on hover */
+}
+
+/* ===== WHAT STUDENTS LEARNED ===== */
+/* 
+New concepts introduced in Step 3:
+1. Container pattern (max-width + margin: 0 auto for centering)
+2. Background colors for section identity
+3. Advanced text effects (-webkit-text-stroke)
+4. Image transforms (scaleX for flipping)
+5. Line-height for text readability
+6. More complex hover effects with multiple properties
+7. Box-shadow for depth and visual interest
+
+Next step: Add skills section with interactive cards and progress bars!
+*/

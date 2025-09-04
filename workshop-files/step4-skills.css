@@ -1,0 +1,134 @@
+/* STEP 4: SKILLS SECTION WITH INTERACTIVE EFFECTS */
+/* Add this CSS to Step 3's CSS to create interactive skill cards! */
+/* Copy ALL of step2-navigation.css + step3-hero.css first, then add this below */
+
+/* ===== SKILLS SECTION LAYOUT ===== */
+#skills-section {
+    text-align: center;       /* Centers all text in this section */
+    padding: 50px 20px;       /* Vertical and horizontal spacing */
+    max-width: 1200px;        /* Consistent with other sections */
+    margin: 0 auto;           /* Centers the section */
+}
+
+/* Section header styling */
+.skills-header {
+    font-weight: 900;         /* Very bold text */
+    font-size: 3rem;          /* Large heading */
+    margin-bottom: 20px;
+}
+
+/* Description text */
+.skills-desc {
+    margin: 30px auto 50px auto;
+    color: #666;              /* Gray text for description */
+    max-width: 600px;         /* Prevents text from being too wide */
+    font-size: 1.1rem;
+    line-height: 1.6;         /* Improves readability */
+}
+
+/* Skills container - Students should TYPE these flex properties */
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;              /* TYPE THIS: Arranges skill cards */
+    flex-direction: column;     /* TYPE THIS: Stacks cards vertically */
+    gap: 20px;                  /* TYPE THIS: Space between cards */
+}
+
+/* ===== INDIVIDUAL SKILL CARDS ===== */
+/* Students should TYPE the interactive properties */
+.skill-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;                /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  /* Card shadow */
+    position: relative;                 /* Allows absolute positioning inside */
+    border: 2px solid #417AFF;         /* Brand color border */
+    transition: all 0.3s ease;         /* TYPE THIS: Smooth animations */
+    cursor: pointer;                    /* Shows hand cursor on hover */
+}
+
+/* HOVER EFFECTS - Students should TYPE these interactive properties */
+.skill-item:hover {
+    transform: translateY(-5px);                        /* TYPE THIS: Lifts card up */
+    box-shadow: 0 10px 25px rgba(65, 122, 255, 0.2);  /* TYPE THIS: Enhanced shadow */
+}
+
+/* Skill name and icon container */
+.skill-info {
+    display: flex;
+    align-items: center;      /* Vertically aligns icon and text */
+    gap: 15px;                /* Space between icon and text */
+    margin-bottom: 15px;
+}
+
+.skill-info i {
+    font-size: 2rem;          /* Large icon size */
+    color: #417AFF;           /* Brand color for icons */
+}
+
+.skill-name {
+    font-weight: 600;         /* Semi-bold text */
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Skill percentage display */
+.skill-percentage {
+    position: absolute;       /* Positioned relative to .skill-item */
+    top: 20px;               /* Distance from top */
+    right: 20px;             /* Distance from right */
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* ===== PROGRESS BAR STYLING ===== */
+/* Progress bar container */
+.skill-bar {
+    width: 100%;              /* Full width of parent */
+    height: 8px;              /* Thin bar height */
+    background-color: #e9ecef; /* Light gray background */
+    border-radius: 10px;      /* Rounded ends */
+    overflow: hidden;         /* Hides overflow from progress bar */
+    margin-top: 10px;
+}
+
+/* Animated progress bar - Students should TYPE the animation properties */
+.skill-progress {
+    height: 100%;             /* Fills parent height */
+    background: linear-gradient(90deg, #417AFF 0%, #6e5ce7 100%);  /* Gradient background */
+    border-radius: 10px;      /* Rounded ends */
+    transition: width 2s ease-in-out;  /* TYPE THIS: Smooth width animation */
+    width: 0%;                /* TYPE THIS: Starts at 0, animates to target */
+}
+
+/* Different skill levels - these will animate when page loads */
+.skill-progress[data-width="95"] {
+    width: 95%;               /* HTML skill level */
+}
+
+.skill-progress[data-width="80"] {
+    width: 80%;               /* CSS skill level */
+}
+
+.skill-progress[data-width="70"] {
+    width: 70%;               /* JavaScript skill level */
+}
+
+/* ===== WHAT STUDENTS LEARNED ===== */
+/* 
+New concepts introduced in Step 4:
+1. CSS Transitions (transition: all 0.3s ease)
+2. Hover effects (:hover pseudo-class)
+3. Transform property (translateY for movement)
+4. Position: relative and absolute for layout
+5. Linear gradients for colorful backgrounds  
+6. CSS animations (width changes over time)
+7. Overflow: hidden to contain elements
+8. Advanced box-shadow effects
+9. Cursor property for user experience
+
+This is where the site becomes truly interactive!
+Next step: Add JavaScript functionality and complete the website!
+*/
